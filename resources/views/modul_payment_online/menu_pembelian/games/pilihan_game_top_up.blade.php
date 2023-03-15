@@ -60,89 +60,27 @@
                         $jenis = $topups[0];
                     @endphp
                     <li class="m-2 xs:m-1 pl-1">
-                        <div
-                            class="text-center h-auto w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                            <span
-                                class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">{{ $topups[0] }}</span>
-                            <p class="text-xs font-normal pt-2">
-                                <script>
-                                    document.write(formatRupiah("<?php echo $topups[2]; ?>"));
-                                </script>
-                            </p>
-                        </div>
+                        <button onclick="myClickButton('<?php echo $kategori; ?>', '<?php echo $harga; ?>')">
+                            <div
+                                class="text-center h-auto w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
+                                <span
+                                    class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">{{ $topups[0] }}</span>
+                                <p class="text-xs font-normal pt-2">
+                                    <script>
+                                        document.write(formatRupiah("<?php echo $topups[2]; ?>"));
+                                    </script>
+                                </p>
+                            </div>
+                        </button>
                     </li>
                 @endforeach
-
-                {{-- <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 62 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp9.700</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 127 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp19.400</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 317 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp48.480</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 634 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp96.960</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 1.373 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp193.920</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 2.059 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp290.880</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 3.564 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp484.800</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 7.656 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp969.600</p>
-                    </div>
-                </li>
-                <li class="m-2 xs:m-1 pl-1">
-                    <div
-                        class="text-center h-28 lg:h-28 md:h-28 sm:h-24 xs:h-24 w-40 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                        <span class="text-base lg:text-base md:text-base sm:text-sm xs:text-sm">Call Of Duty 15.312 CP</span>
-                        <p class="text-xs font-normal pt-2">Rp1.939.200</p>
-                    </div>
-                </li> --}}
             </ul>
         </div>
         <div class="mt-4 border-t-2 pt-3">
             <div class="grid grid-cols-2">
                 <div class="lg:text-base xs:text-sm">
                     <span class="font-medium">Harga</span>
-                    <p>Rp. Nominal Harga</p>
+                    <div id="harga-voucher">-</div>
                 </div>
                 <div class="font-medium text-white  ">
                     <a href="/checkout-top-up-game">
@@ -164,6 +102,7 @@
             box-shadow: 2px orange
         }
     </style>
+    <script type="text/javascript" src="{{ asset('storage/js/modul_payment_online/myClickButton.js') }}"></script>
     <script>
         $("#beli-topup-game").on('click', 'li', function() {
             $("#beli-pulsa li.active").removeClass("active");

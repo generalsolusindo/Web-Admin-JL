@@ -43,6 +43,7 @@
                         $harga = $vouchers[2];
                     @endphp
                     <li class="m-2 xs:m-1 pl-1">
+                        <button onclick="myClickButton('<?php echo $kategori;?>', '<?php echo $harga;?>')">
                         <div
                             class="text-center h-auto lg:w-40 sm:w-36 xs:w-32 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
                             <span>{{ $vouchers[0] }}</span>
@@ -52,15 +53,16 @@
                                 </script>
                             </p>
                         </div>
+                        </button>
                     </li>
-                    @endforeach
+                @endforeach
             </ul>
         </div>
         <div class="mt-4 border-t-2 pt-3">
             <div class="grid grid-cols-2">
                 <div class="lg:text-base xs:text-sm">
                     <span class="font-medium">Harga</span>
-                    <p>Rp. Nominal Harga</p>
+                    <div id="harga-voucher">-</div>
                 </div>
                 <div class="font-medium text-white  ">
                     <a href="/checkout-voucher-game">
@@ -82,6 +84,7 @@
             box-shadow: 2px orange
         }
     </style>
+    <script type="text/javascript" src="{{asset('storage/js/modul_payment_online/myClickButton.js')}}"></script>
     <script>
         $("#beli-voucher-game").on('click', 'li', function() {
             $("#beli-pulsa li.active").removeClass("active");
