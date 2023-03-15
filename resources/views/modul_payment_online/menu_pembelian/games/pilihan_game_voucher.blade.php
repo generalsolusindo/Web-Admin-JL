@@ -21,6 +21,10 @@
             rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
             return prefix == undefined ? (rupiah ? 'Rp' + rupiah : '') : rupiah;
         }
+        function simpanVariable(kategori, harga){
+            var kategori2 = kategori
+            document.getElementById("demo").innerHTML = kategori;
+        }
     </script>
 </head>
 
@@ -43,16 +47,16 @@
                         $harga = $vouchers[2];
                     @endphp
                     <li class="m-2 xs:m-1 pl-1">
-                        <button onclick="myClickButton('<?php echo $kategori;?>', '<?php echo $harga;?>')">
-                        <div
-                            class="text-center h-auto lg:w-40 sm:w-36 xs:w-32 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                            <span>{{ $vouchers[0] }}</span>
-                            <p class="text-sm font-normal pt-2">
-                                <script>
-                                    document.write(formatRupiah("<?php echo $vouchers[2]; ?>"));
-                                </script>
-                            </p>
-                        </div>
+                        <button onclick="myClickButton('<?php echo $kategori; ?>', '<?php echo $harga; ?>')">
+                            <div
+                                class="text-center h-auto lg:w-40 sm:w-36 xs:w-32 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200" >
+                                <span>{{ $vouchers[0] }}</span>
+                                <p class="text-sm font-normal pt-2">
+                                    <script>
+                                        document.write(formatRupiah("<?php echo $vouchers[2]; ?>"));
+                                    </script>
+                                </p>
+                            </div>
                         </button>
                     </li>
                 @endforeach
@@ -75,6 +79,7 @@
             </div>
         </div>
     </div>
+    <p id="demo"></p>
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
@@ -84,7 +89,7 @@
             box-shadow: 2px orange
         }
     </style>
-    <script type="text/javascript" src="{{asset('storage/js/modul_payment_online/myClickButton.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('storage/js/modul_payment_online/myClickButton.js') }}"></script>
     <script>
         $("#beli-voucher-game").on('click', 'li', function() {
             $("#beli-pulsa li.active").removeClass("active");
@@ -92,6 +97,7 @@
             $(this).addClass("active");
         });
     </script>
+
 </body>
 
 </html>
