@@ -115,3 +115,11 @@ Route::get('/list-promo-merchant', function () {
 
 
 
+// coba
+Route::post('/prosesphp', function () {
+    return view('proses');
+});
+
+
+
+

@@ -57,19 +57,23 @@
                 @foreach ($keuangan['produk'] as $emoney)
                     <li class="mr-2 my-2 pl-2 cursor-pointer active:border-orange-juallagi_gelap">
                         @php
+                            $kategori = $emoney[1];
                             $harga = $emoney[2];
                         @endphp
-                        <div
-                            class="text-center h-auto w-32 lg:w-32 xs:w-36 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200 ">
-                            <div class="pt-2">
-                                <span>{{ $emoney[0] }}</span>
-                                <p class="text-sm font-medium">
-                                    <script>
-                                        document.write(formatRupiah("<?php echo $emoney[2]; ?>"));
-                                    </script>
-                                </p>
+                        <button onclick="myClickButton('<?php echo $kategori; ?>', '<?php echo $harga; ?>')">
+                            <div
+                                class="text-center h-auto w-32 lg:w-32 xs:w-36 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200 ">
+                                <div class="pt-2">
+                                    <span class="text-sm lg:text-sm md:text-xs xs:text-xs">{{ $emoney[0] }}</span>
+                                    <p class="font-normal text-xs">{{ $emoney[1] }}</p>
+                                    <p class="text-sm font-medium">
+                                        <script>
+                                            document.write(formatRupiah("<?php echo $emoney[2]; ?>"));
+                                        </script>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
                 @endforeach
             </ul>
@@ -78,7 +82,7 @@
             <div class="grid grid-cols-2">
                 <div class="lg:text-base xs:text-sm">
                     <span class="font-medium">Harga</span>
-                    <p>Rp50.000</p>
+                    <div id="harga-voucher">-</div>
                 </div>
                 <div class="font-medium text-white  ">
                     <a href="/checkout-keuangan">
@@ -94,6 +98,7 @@
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
+    <script type="text/javascript" src="{{asset('storage/js/modul_payment_online/myClickButton.js')}}"></script>
 </body>
 
 </html>

@@ -37,26 +37,33 @@
                 @foreach ($vouchers['produk'] as $voucher)
                     @if ($voucher[3] === 'VOUCHER')
                         <li class="my-2 mr-1.5 lg:mr-1.5 xs:mr-2">
-                            <div
-                                class="text-center h-auto w-36 lg:w-52 md:w-40 sm:w-40 xs:w-36 lg:py-4 lg:px-4 md:py-7 sm:py-9 xs:py-9 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
-                                <span class="text-xs lg:text-xs md:text-xs xs:text-xs">{{ $voucher[0] }}</span>
-                                <p class="font-normal">{{ $voucher[1] }}</p>
-                                <p class="text-sm font-medium">
-                                    <script>
-                                        document.write(formatRupiah("<?php echo $voucher[2]; ?>"));
-                                    </script>
-                                </p>
-                            </div>
+                            @php
+                                $kategori = $voucher[1];
+                                $harga = $voucher[2];
+                            @endphp
+                            <button onclick="myClickButton('<?php echo $kategori;?>', '<?php echo $harga;?>')">
+                                <div class="text-center h-auto w-36 lg:w-52 md:w-40 sm:w-40 xs:w-36 lg:py-4 lg:px-4 md:py-7 sm:py-9 xs:py-9 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200 cursor-pointer"
+                                    >
+                                    <span class="text-xs lg:text-xs md:text-xs xs:text-xs">{{ $voucher[0] }}</span>
+                                    <p class="font-normal">{{ $voucher[1] }}</p>
+                                    <p class="text-sm font-medium">
+                                        <script>
+                                            document.write(formatRupiah("<?php echo $voucher[2]; ?>"));
+                                        </script>
+                                    </p>
+                                </div>
+                            </button>
                         </li>
                     @endif
                 @endforeach
+
             </ul>
         </div>
         <div class="mt-4 border-t-2 pt-3">
             <div class="grid grid-cols-2">
                 <div class="lg:text-base xs:text-sm">
                     <span class="font-medium">Harga</span>
-                    <p>Rp50.000</p>
+                    <div id="harga-voucher">-</div>
                 </div>
                 <div class="font-medium text-white  ">
                     <a href="/checkout-voucher-internet">
@@ -72,6 +79,7 @@
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
+    <script type="text/javascript" src="{{asset('storage/js/modul_payment_online/myClickButton.js')}}"></script>
 </body>
 
 </html>

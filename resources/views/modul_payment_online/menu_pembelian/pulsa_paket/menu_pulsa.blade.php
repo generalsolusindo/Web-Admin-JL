@@ -26,23 +26,27 @@
             </div>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-            <input type="email" name="floating_email" id="floating_email"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required />
-            <label for="floating_email"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukkan
-                Nomor Telepon</label>
+            <form action="" method="GET">
+                <input type="email" name="floating_email" id="floating_email"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="floating_email"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukkan
+                    Nomor Telepon</label>
+            </form>
         </div>
     </div>
     <div class="w-full border-t-4 mt-3">
         <div class="grid grid-cols-2 font-medium gap-8">
-            <a href="/beli-pulsa">
-                <div class="w-full mr-4 text-center h-12 p-3 rounded-lg bg-white hover:bg-orange-juallagi_gelap hover:text-white transition ease-in-out hover:scale-105 delay-150 duration-200">
+            <a href="/beli-pulsa" type="submit">
+                <div
+                    class="w-full mr-4 text-center h-12 p-3 rounded-lg bg-white hover:bg-orange-juallagi_gelap hover:text-white transition ease-in-out hover:scale-105 delay-150 duration-200">
                     <span>Beli Pulsa</span>
                 </div>
             </a>
             <a href="/transfer-pulsa">
-                <div class="w-full text-center h-12 p-3 rounded-lg bg-white hover:bg-orange-juallagi_gelap hover:text-white transition ease-in-out hover:scale-105 delay-150 duration-200">
+                <div
+                    class="w-full text-center h-12 p-3 rounded-lg bg-white hover:bg-orange-juallagi_gelap hover:text-white transition ease-in-out hover:scale-105 delay-150 duration-200">
                     <span>Transfer Pulsa</span>
                 </div>
             </a>

@@ -27,6 +27,19 @@ class VoucherInternetPaketController extends Controller
     ])->get(config('delogic.base_api') . "/wil/get-product/$idKategori/$detailKategori");
 
     $vouchers = $response->json();
+    // dd($vouchers)  ;
+
+    return view('/modul_payment_online/menu_pembelian/voucher_internet/pilih_list_voucher',  compact(
+      ['vouchers']
+    ));
+  }
+  public function checkoutvoucherinternet($kategori, $harga)
+  {
+    $response = Http::withHeaders([
+      'X-Token' => session('token')
+    ])->get(config('delogic.base_api') . "/wil/get-product/$kategori/$harga");
+
+    $vouchers = $response->json();
     // dd($vouchers);
 
     return view('/modul_payment_online/menu_pembelian/voucher_internet/pilih_list_voucher',  compact(
