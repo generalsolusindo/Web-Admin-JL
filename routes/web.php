@@ -61,6 +61,9 @@ Route::get('DetailGameTopUp/{detailKategori}', [GamesController::class, 'detailt
 Route::get('/checkout-top-up-game', function () {
     return view('/modul_payment_online/menu_pembelian/games/checkout_topup_game');
 });
+Route::get('/checkout-voucher-game', function () {
+    return view('/modul_payment_online/menu_pembelian/games/checkout_voucher_game');
+});
 
 // Token Listrik
 Route::get('/token-listrik', [ListrikTokenPLNController::class, 'index']);

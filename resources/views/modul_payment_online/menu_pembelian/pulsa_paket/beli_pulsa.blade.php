@@ -38,7 +38,7 @@
                 Nomor Telepon</label>
         </div>
         <div class="">
-            <ul id="beli-pulsa" class=" flex flex-wrap text-sm font-medium sm:justify-start xs:justify-around">
+            <ul class=" flex flex-wrap text-sm font-medium sm:justify-start xs:justify-around">
                 @foreach ($data as $result)
                     <li class="active:border-orange-juallagi_gelap m-2 pl-2 cursor-pointer">
                         <div
@@ -71,14 +71,6 @@
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
-
-    <script>
-        $("#beli-pulsa").on('click', 'li', 'div', function() {
-            $("#beli-pulsa li.div.active").removeClass("active");
-            $(this).addClass("active");
-        });
-    </script>
-    
 
 </body>
 

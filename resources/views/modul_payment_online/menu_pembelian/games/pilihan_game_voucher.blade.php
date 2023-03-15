@@ -39,7 +39,7 @@
             <span class=" text-xl font-bold font-sans ">Pilih Voucher Game</span>
         </div>
         <div class="">
-            <ul id="beli-voucher-game" class="flex flex-wrap text-sm font-medium lg:justify-start xs:justify-around">
+            <ul class="flex flex-wrap text-sm font-medium lg:justify-start xs:justify-around">
                 @foreach ($voucher['produk'] as $vouchers)
                     @php
                         $jenis = $vouchers[0];
@@ -83,19 +83,11 @@
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
-    <style>
-        .active {
-            border-color: orange;
-            box-shadow: 2px orange
-        }
-    </style>
-    <script type="text/javascript" src="{{ asset('storage/js/modul_payment_online/myClickButton.js') }}"></script>
     <script>
-        $("#beli-voucher-game").on('click', 'li', function() {
-            $("#beli-pulsa li.active").removeClass("active");
-            // adding classname 'active' to current click li 
-            $(this).addClass("active");
-        });
+        function myClickButton(kategori, harga) {
+            var harga = formatRupiah(harga);
+            document.getElementById('harga-voucher').innerHTML = harga
+        }
     </script>
 
 </body>

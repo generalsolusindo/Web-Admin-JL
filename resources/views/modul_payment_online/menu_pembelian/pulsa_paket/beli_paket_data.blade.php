@@ -30,7 +30,7 @@
             <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukkan Nomor Telepon</label>
         </div>
         <div class="">
-            <ul id="beli-paket" class="flex flex-wrap text-sm font-medium sm:justify-start xs:justify-around">
+            <ul class="flex flex-wrap text-sm font-medium sm:justify-start xs:justify-around">
                 @foreach($data as $result)
                 <li class="m-2 pl-2">
                     <div class="text-center h-16 w-32 p-4 rounded-lg border-2 hover:border-orange-juallagi_gelap transition ease-in-out hover:scale-105 delay-150 duration-200">
@@ -60,19 +60,6 @@
     <div class="mt-10">
         @include('landing_page.footer')
     </div>
-    <style>
-        .active {
-            border-color: orange;
-            box-shadow: 2px orange
-        }
-    </style>
-    <script>
-        $("#beli-paket").on('click', 'li', function() {
-            $("#beli-pulsa li.active").removeClass("active");
-            // adding classname 'active' to current click li 
-            $(this).addClass("active");
-        });
-    </script>
 </body>
 
 </html>

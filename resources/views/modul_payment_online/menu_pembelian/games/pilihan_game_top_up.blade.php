@@ -96,20 +96,7 @@
     <div class="border-t-4 mt-10">
         @include('landing_page.footer')
     </div>
-    <style>
-        .active {
-            border-color: orange;
-            box-shadow: 2px orange
-        }
-    </style>
     <script type="text/javascript" src="{{ asset('storage/js/modul_payment_online/myClickButton.js') }}"></script>
-    <script>
-        $("#beli-topup-game").on('click', 'li', function() {
-            $("#beli-pulsa li.active").removeClass("active");
-            // adding classname 'active' to current click li 
-            $(this).addClass("active");
-        });
-    </script>
 </body>
 
 </html>
