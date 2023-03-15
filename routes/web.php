@@ -49,6 +49,7 @@ Route::get('/voucher-internet', function () {
     return view('/modul_payment_online/menu_pembelian/voucher_internet/menu_voucher');
 });
 Route::get('voucherskategori/{kategori}', [VoucherInternetPaketController::class, 'index'])->name('voucherskategori');
+Route::get('/detailVouchers/{idKategori}/{detailKategori}', [VoucherInternetPaketController::class, 'detailvoucherinternet'])->name('detailVouchers');
 Route::get('/checkout-voucher-internet', function () {
     return view('/modul_payment_online/menu_pembelian/voucher_internet/checkout_voucher_internet');
 });

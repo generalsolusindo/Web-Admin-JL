@@ -15,11 +15,11 @@
     </nav>
     <div class="pt-16">
         <div class="flex lg:flex-row md:flex-col sm:flex-col xs:flex-col justify-between mx-auto max-w-screen-xl lg:max-w-screen-xl md:max-w-screen-sm sm:max-w-screen-xs xs:max-w-screen-xs py-2.5">
-            <div class="w-full h-60 lg:h-52 md:h-full sm:h-full xs:h-full  bg-white border border-gray-300 rounded-lg shadow mr-4 lg:mb-0 md:mb-5 sm:mb-8 xs:mb-9">
+            <div class="w-full h-60 lg:h-60 md:h-full sm:h-full xs:h-full  bg-white border border-gray-300 rounded-lg shadow mr-4 lg:mb-0 md:mb-5 sm:mb-8 xs:mb-9">
                 <div class="border-b-4">
                     <h5 class="px-12 lg:px-12 md:px-10 sm:px-8 xs:px-5 lg:text-xl md:text-lg sm:text-md xs:text-sm py-4 text-xl font-bold text-gray-900 ">Checkout</h5>
                 </div>
-                <div class="px-12 lg:px-12 md:px-10 sm:px-8 xs:px-5 xs:text-xs text-sm py-2">
+                <div class="px-12 lg:px-12 md:px-10 sm:px-8 xs:px-5 lg:text-sm xs:text-xs text-sm py-2">
                     <div class="grid grid-cols-2 leading-7">
                         <div>Jenis Layanan</div>
                         <div>Pembelian Voucher Internet</div>
